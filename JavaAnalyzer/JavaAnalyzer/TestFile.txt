@@ -1,0 +1,82 @@
+﻿// TestFile.java
+
+
+public class TestFile {
+
+    public static void main(String[] args) {
+
+        // Операторы
+        int a = 10, b = 20;
+        int sum = a + b;
+        int difference = a - b; 
+        int product = a * b; 
+        int quotient = a / b; 
+        int remainder = a % b; 
+        boolean isEqual = (a == b); 
+        boolean isNotEqual = (a != b); 
+        boolean isGreater = (a > b); 
+        boolean isLess = (a < b); 
+        boolean logicalAnd = (a > 5 && b < 30); 
+        boolean logicalOr = (a > 5 || b < 10); 
+        int postIncrement = a++; 
+        int preIncrement = ++b; 
+
+        // Условные операторы
+        if (sum > 20) {
+            System.out.println("Sum is greater than 20");
+        } else {
+            System.out.println("Sum is less than or equal to 20");
+        }
+
+        // Циклы
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Iteration: " + i);
+        }
+
+        // Switch выражение
+        String day = "Monday";
+        switch (day) {
+            case "Monday" -> System.out.println("Start of the week");
+            case "Friday" -> System.out.println("End of the week");
+            default -> System.out.println("Midweek");
+        }
+
+        // Массивы
+        int[] array = {1, 2, 3, 4, 5};
+        for (int value : array) {
+            System.out.println("Array value: " + value);
+        }
+
+        // Вызов метода
+        printMessage(message);
+
+        // Текстовый блок
+        String textBlock = """
+                This is a text block
+                """;
+        System.out.println(textBlock);
+    }
+
+    private static void printMessage(String message) {
+        System.out.println("Message: " + message);
+    }
+
+    // Запись (record)
+    record Point(int x, int y) {
+        public static void printCoordinates(Point point) {
+            System.out.println("X: " + point.x() + ", Y: " + point.y());
+        }
+    }
+
+
+    // Исключения
+    public static void exceptionTest() {
+        try {
+            int result = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Caught ArithmeticException: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block executed");
+        }
+    }
+}

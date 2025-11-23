@@ -1,0 +1,35 @@
+public class AllLiteralsDemo {
+    public static void main(String[] args) {
+      
+        int decimalInt = 42;                  
+        int hexInt = 0x2A;                   
+        int octalInt = 052;                   
+        int binaryInt = 0b101010;             
+        long bigLong = 123_456_789_000L;      
+
+       
+        double simpleDouble = 3.14;           
+        float simpleFloat = 3.14f;            
+        double sciDouble = 1.23e4;            
+        double hexDouble = 0x1.2p3;           
+
+       
+        char letterA = 'A';                   
+        char unicodeChar = '\u03A9';          
+        char escapeChar = '\n';               
+      
+        String simpleString = "Hello, Java 17!";
+        String multiLineString = """
+                Это текст
+                в несколько строк
+                (Text Blocks, Java 15+)""";
+        String escapedString = "Символы: \"\\\t\r\n";
+
+   
+        boolean isJavaCool = true;
+        boolean isCobolCool = false;
+
+  
+        Object nullObject = null;
+ }
+}
